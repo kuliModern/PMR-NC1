@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		C0F92A1A26404A5200578145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F92A1926404A5200578145 /* AppDelegate.swift */; };
 		C0F92A1C26404A5200578145 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F92A1B26404A5200578145 /* SceneDelegate.swift */; };
-		C0F92A1E26404A5200578145 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F92A1D26404A5200578145 /* ViewController.swift */; };
 		C0F92A2126404A5200578145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F92A1F26404A5200578145 /* Main.storyboard */; };
 		C0F92A2326404A5300578145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F92A2226404A5300578145 /* Assets.xcassets */; };
 		C0F92A2626404A5300578145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F92A2426404A5300578145 /* LaunchScreen.storyboard */; };
+		C0F92A312640503500578145 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F92A302640503500578145 /* FirstPageViewController.swift */; };
+		C0F92A332640539800578145 /* FirstPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F92A322640539800578145 /* FirstPageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C0F92A1626404A5200578145 /* PeEmEr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeEmEr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F92A1926404A5200578145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F92A1B26404A5200578145 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C0F92A1D26404A5200578145 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0F92A2026404A5200578145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0F92A2226404A5300578145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0F92A2526404A5300578145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0F92A2726404A5300578145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0F92A302640503500578145 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		C0F92A322640539800578145 /* FirstPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		C0F92A1826404A5200578145 /* PeEmEr */ = {
 			isa = PBXGroup;
 			children = (
+				C0F92A2F2640501900578145 /* Controller */,
+				C0F92A2E2640501500578145 /* View */,
+				C0F92A2D2640501000578145 /* Model */,
 				C0F92A1926404A5200578145 /* AppDelegate.swift */,
 				C0F92A1B26404A5200578145 /* SceneDelegate.swift */,
-				C0F92A1D26404A5200578145 /* ViewController.swift */,
 				C0F92A1F26404A5200578145 /* Main.storyboard */,
 				C0F92A2226404A5300578145 /* Assets.xcassets */,
 				C0F92A2426404A5300578145 /* LaunchScreen.storyboard */,
 				C0F92A2726404A5300578145 /* Info.plist */,
 			);
 			path = PeEmEr;
+			sourceTree = "<group>";
+		};
+		C0F92A2D2640501000578145 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0F92A2E2640501500578145 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C0F92A322640539800578145 /* FirstPageModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C0F92A2F2640501900578145 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C0F92A302640503500578145 /* FirstPageViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F92A1E26404A5200578145 /* ViewController.swift in Sources */,
+				C0F92A312640503500578145 /* FirstPageViewController.swift in Sources */,
+				C0F92A332640539800578145 /* FirstPageModel.swift in Sources */,
 				C0F92A1A26404A5200578145 /* AppDelegate.swift in Sources */,
 				C0F92A1C26404A5200578145 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.NanoChallenge1.ADA.PeEmEr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.NanoChallenge1.ADA.PeEmEr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
