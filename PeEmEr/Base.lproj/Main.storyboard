@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hWR-fS-UIr">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="522"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Abz-of-Gdx">
                                 <rect key="frame" x="-183" y="248" width="756" height="756"/>
@@ -44,20 +45,29 @@
                                 <state key="normal" title="Tap to Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapToStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7KT-Lh-hox"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.2861461341" green="0.53336632250000005" blue="0.60384374860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.035274315629999997" green="0.074516691270000004" blue="0.074494622649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hWR-fS-UIr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6BC-fC-xdw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hWR-fS-UIr" secondAttribute="trailing" id="BHX-1I-Sbu"/>
                             <constraint firstItem="hWR-fS-UIr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q0S-Kc-WFZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hWR-fS-UIr" secondAttribute="bottom" id="xyp-vK-ayw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hWR-fS-UIr" secondAttribute="bottom" constant="288" id="xyp-vK-ayw"/>
                         </constraints>
+                        <connections>
+                            <outlet property="backgroundView" destination="hWR-fS-UIr" id="aFB-v2-7nU"/>
+                            <outlet property="circleView" destination="Abz-of-Gdx" id="DXA-SN-Odz"/>
+                            <outlet property="pmrDesc" destination="g1V-d5-ugf" id="V5z-tH-WIQ"/>
+                            <outlet property="pmrLabel" destination="5oc-7i-mXc" id="hKn-GY-KHX"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="pmrDesc" destination="g1V-d5-ugf" id="ccc-AY-Kk0"/>
-                        <outlet property="pmrLabel" destination="5oc-7i-mXc" id="hjp-da-puY"/>
+                        <outlet property="firstPage" destination="8bC-Xf-vdC" id="cqa-az-ayh"/>
+                        <segue destination="x9C-gC-auN" kind="presentation" identifier="secondVC" animates="NO" modalPresentationStyle="fullScreen" id="J6S-cl-Tb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,10 +101,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="B4Z-xy-kNh">
+                                <rect key="frame" x="155" y="580" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.01129880361" green="0.40787070990000002" blue="0.51757878069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWF-eT-L4a">
+                                <rect key="frame" x="162" y="585" width="66" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" red="0.89794546369999995" green="0.95299547910000004" blue="0.99203771350000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uIv-5x-uO9"/>
                         <color key="backgroundColor" red="0.035274315629999997" green="0.074516691270000004" blue="0.074494622649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xex-I6-lfo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqc-sz-1LF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,5 +129,6 @@
     <resources>
         <image name="background" width="388" height="694"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
     </resources>
 </document>
