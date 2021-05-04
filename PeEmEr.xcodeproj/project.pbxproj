@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C0A8B02826413797007A8396 /* ThirdPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A8B02726413797007A8396 /* ThirdPageView.swift */; };
+		C0A8B0362641AFCD007A8396 /* Rains.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0A8B0352641AFCD007A8396 /* Rains.mp3 */; };
+		C0A8B0382641AFE3007A8396 /* OceanWaves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0A8B0372641AFE3007A8396 /* OceanWaves.mp3 */; };
+		C0AB00AB2641B25700FE96A4 /* VoiceOver.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C0AB00AA2641B25700FE96A4 /* VoiceOver.m4a */; };
 		C0F92A1A26404A5200578145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F92A1926404A5200578145 /* AppDelegate.swift */; };
 		C0F92A1C26404A5200578145 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F92A1B26404A5200578145 /* SceneDelegate.swift */; };
 		C0F92A2126404A5200578145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F92A1F26404A5200578145 /* Main.storyboard */; };
@@ -23,9 +26,12 @@
 
 /* Begin PBXFileReference section */
 		C0A8B02726413797007A8396 /* ThirdPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageView.swift; sourceTree = "<group>"; };
-		C0A8B03226414F70007A8396 /* Ocean Wave Sounds- 5 minutes of Relaxing Ocean Waves Calms your Mood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ocean Wave Sounds- 5 minutes of Relaxing Ocean Waves Calms your Mood.mp3"; sourceTree = "<group>"; };
-		C0A8B03326414F70007A8396 /* Relaxing Rain Sounds, Pt. 01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Relaxing Rain Sounds, Pt. 01.mp3"; sourceTree = "<group>"; };
-		C0A8B03426414F70007A8396 /* Calm Ocean Sounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Calm Ocean Sounds.mp3"; sourceTree = "<group>"; };
+		C0A8B03226414F70007A8396 /* OceanWave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OceanWave.mp3; sourceTree = "<group>"; };
+		C0A8B03326414F70007A8396 /* Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rain.mp3; sourceTree = "<group>"; };
+		C0A8B03426414F70007A8396 /* Oceans.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Oceans.mp3; sourceTree = "<group>"; };
+		C0A8B0352641AFCD007A8396 /* Rains.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rains.mp3; sourceTree = "<group>"; };
+		C0A8B0372641AFE3007A8396 /* OceanWaves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OceanWaves.mp3; sourceTree = "<group>"; };
+		C0AB00AA2641B25700FE96A4 /* VoiceOver.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = VoiceOver.m4a; sourceTree = "<group>"; };
 		C0F92A1626404A5200578145 /* PeEmEr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeEmEr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F92A1926404A5200578145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F92A1B26404A5200578145 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,9 +61,6 @@
 		C0A8B03126414F6F007A8396 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				C0A8B03426414F70007A8396 /* Calm Ocean Sounds.mp3 */,
-				C0A8B03326414F70007A8396 /* Relaxing Rain Sounds, Pt. 01.mp3 */,
-				C0A8B03226414F70007A8396 /* Ocean Wave Sounds- 5 minutes of Relaxing Ocean Waves Calms your Mood.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -65,7 +68,6 @@
 		C0F92A0D26404A5200578145 = {
 			isa = PBXGroup;
 			children = (
-				C0A8B03126414F6F007A8396 /* Sounds */,
 				C0F92A3A264123C300578145 /* font */,
 				C0F92A1826404A5200578145 /* PeEmEr */,
 				C0F92A1726404A5200578145 /* Products */,
@@ -83,6 +85,13 @@
 		C0F92A1826404A5200578145 /* PeEmEr */ = {
 			isa = PBXGroup;
 			children = (
+				C0A8B03326414F70007A8396 /* Rain.mp3 */,
+				C0A8B0352641AFCD007A8396 /* Rains.mp3 */,
+				C0A8B03226414F70007A8396 /* OceanWave.mp3 */,
+				C0A8B0372641AFE3007A8396 /* OceanWaves.mp3 */,
+				C0A8B03426414F70007A8396 /* Oceans.mp3 */,
+				C0AB00AA2641B25700FE96A4 /* VoiceOver.m4a */,
+				C0A8B03126414F6F007A8396 /* Sounds */,
 				C0F92A2F2640501900578145 /* Controller */,
 				C0F92A2E2640501500578145 /* View */,
 				C0F92A2D2640501000578145 /* Model */,
@@ -188,9 +197,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A8B0362641AFCD007A8396 /* Rains.mp3 in Resources */,
 				C0F92A2626404A5300578145 /* LaunchScreen.storyboard in Resources */,
 				C0F92A3C264123F200578145 /* Montserrat in Resources */,
+				C0AB00AB2641B25700FE96A4 /* VoiceOver.m4a in Resources */,
 				C0F92A2326404A5300578145 /* Assets.xcassets in Resources */,
+				C0A8B0382641AFE3007A8396 /* OceanWaves.mp3 in Resources */,
 				C0F92A2126404A5200578145 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

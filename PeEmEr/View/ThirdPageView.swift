@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol closeButtonDelegate {
     func closeButton()
@@ -14,16 +15,21 @@ protocol closeButtonDelegate {
 
 class ThirdPageView: UIView{
     
-  
+    
     @IBOutlet weak var buttonStop: UIButton!
     @IBOutlet weak var biruMudaAtas: UIImageView!
     @IBOutlet weak var biruTengah: UIImageView!
     @IBOutlet weak var biruTuaPalingBawah: UIImageView!
+    @IBOutlet weak var endLabel: UILabel!
+    @IBOutlet weak var progressAudio: UIProgressView!
     
     var delegate: closeButtonDelegate?
+    var player: AVAudioPlayer?
+    var timer: Timer?
     
     func setup(delegate: closeButtonDelegate){
         buttonStop.layer.cornerRadius = 0.5 * buttonStop.bounds.size.width
+        
         self.delegate = delegate
     }
     
@@ -34,7 +40,7 @@ class ThirdPageView: UIView{
             .repeat,
             .autoreverse
         ]
-      
+        
         UIView.animate(withDuration: 5,
                        delay: 0,
                        options: options) {
@@ -45,6 +51,63 @@ class ThirdPageView: UIView{
         
     }
     
+    func voiceOver(){
+        
+        //Set Up Playernya, trus di play
+        if let player = player, player.isPlaying{
+            player.pause()
+            buttonStop.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        }
+        else{
+            buttonStop.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+            
+            guard let soundPath = Bundle.main.url(forResource: "VoiceOver", withExtension: "m4a")
+            else {return print("File gak ketemu")}
+            
+            do {
+                // Configure and activate the AVAudioSession
+                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+                try AVAudioSession.sharedInstance().setActive(true)
+                
+                
+                player = try AVAudioPlayer(contentsOf: soundPath, fileTypeHint: AVFileType.m4a.rawValue)
+                // Play a sound
+                guard let player = player else {return}
+                
+                player.play()
+                
+                var updater = CADisplayLink(target: self, selector: #selector(self.updateProgress))
+                updater.preferredFramesPerSecond = 1
+                updater.add(to: RunLoop.current, forMode: RunLoop.Mode.common)
+                
+                
+                endLabel(fromPlayer: player)
+                
+                
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    @objc func updateProgress(){
+        
+        let normalizedTime = Float(self.player?.currentTime as! Double / (self.player?.duration as! Double) )
+        progressAudio.progress = normalizedTime
+        
+    }
+    
+    func endLabel(fromPlayer player: AVAudioPlayer){
+        
+        let duration = player.duration
+        let secondsText = Int(duration) % Int(60)
+        let minutesText = Int(duration / 60)
+        
+        endLabel.text = "\(minutesText):\(secondsText)"
+        
+        
+    }
     
     
     @IBAction func closeButton(_ sender: UIButton) {
@@ -52,10 +115,9 @@ class ThirdPageView: UIView{
         delegate?.closeButton()
         
     }
-
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         delegate?.buttonPressed()
         
     }
-    
 }

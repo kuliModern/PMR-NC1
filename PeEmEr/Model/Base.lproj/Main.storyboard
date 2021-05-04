@@ -172,19 +172,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.035274315629999997" green="0.074516691270000004" blue="0.074494622649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-dN-tIU">
-                                <rect key="frame" x="162" y="583" width="66" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.01129880361" green="0.40787070990000002" blue="0.51757878069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="tintColor" red="0.89794546369999995" green="0.95299547910000004" blue="0.99203771350000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="LK1-XE-MGM" eventType="touchUpInside" id="ePg-LH-K8S"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Close Your Eyes..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvF-b7-VMJ">
                                 <rect key="frame" x="123" y="232" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -205,6 +192,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-dN-tIU">
+                                <rect key="frame" x="162" y="583" width="66" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.01129880361" green="0.40787070990000002" blue="0.51757878069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" red="0.89794546369999995" green="0.95299547910000004" blue="0.99203771350000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="LK1-XE-MGM" eventType="touchUpInside" id="ePg-LH-K8S"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="05:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pf-FE-63N">
                                 <rect key="frame" x="350" y="404" width="24" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -231,6 +231,8 @@
                             <outlet property="biruTengah" destination="FS0-jC-P6Q" id="Trz-iZ-oYF"/>
                             <outlet property="biruTuaPalingBawah" destination="Jnj-87-soC" id="8WL-O9-xhe"/>
                             <outlet property="buttonStop" destination="iBc-dN-tIU" id="iU2-tW-D55"/>
+                            <outlet property="endLabel" destination="7Pf-FE-63N" id="gkQ-d3-Ztw"/>
+                            <outlet property="progressAudio" destination="pdM-2h-Tta" id="YC0-l2-bxp"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="g6j-tD-Tkn"/>

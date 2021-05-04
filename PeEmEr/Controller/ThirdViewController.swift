@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ThirdViewController: UIViewController, closeButtonDelegate {
     
@@ -16,8 +17,15 @@ class ThirdViewController: UIViewController, closeButtonDelegate {
         super.viewDidLoad()
 
         thirdModel.setup(delegate: self)
+       
+        thirdModel.voiceOver()
+        
         
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        thirdModel.animateWave()
     }
     
     func closeButton() {
@@ -26,7 +34,10 @@ class ThirdViewController: UIViewController, closeButtonDelegate {
     }
     
     func buttonPressed() {
-        thirdModel.animateWave()
+        thirdModel.voiceOver()
+        
+        
+
     }
     
    
