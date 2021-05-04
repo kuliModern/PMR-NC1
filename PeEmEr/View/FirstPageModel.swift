@@ -9,6 +9,7 @@ import UIKit
 
 class FirstPageModel: UIView{
     
+   
     @IBOutlet weak var tapToStart: UIButton!
     @IBOutlet weak var circleView: UIImageView!
     @IBOutlet weak var backgroundView: UIImageView!
@@ -23,7 +24,7 @@ class FirstPageModel: UIView{
         pmrDesc.alpha = 0
         pmrLabel.alpha = 0
         fadeIn(pmrLabel: pmrLabel, pmrDesc: pmrDesc)
-        gradientLayer(shinyTextLabel: shimmers())
+       
         
     }
     
@@ -41,10 +42,21 @@ class FirstPageModel: UIView{
         }
     }
     
-    func transitionOut(){
+    func transitionOut(completion: @escaping (_ success: Bool) -> Void){
+        
+       
         UIView.animate(withDuration: 2, animations: {
+            
+            self.tapToStart.alpha = 0
             self.circleView.frame = CGRect(x: -218, y: -103, width: 824, height: 823)
-        }, completion: nil)
+            self.pmrDesc.alpha = 0
+            self.pmrLabel.alpha = 0
+            
+            
+            
+        }, completion: completion)
+        
+        
     }
     
     func shimmers() -> UILabel{

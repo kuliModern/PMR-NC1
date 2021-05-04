@@ -11,20 +11,28 @@ class FirstPageViewController: UIViewController {
     
     @IBOutlet var firstPage: FirstPageModel!
     
-  
+    var uiViewBaru: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         firstPage.setup()
-        view.addSubview(firstPage.gradientLayer(shinyTextLabel: firstPage.shimmers()))
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    @IBAction func tapToStart(_ sender: UIButton) {
-        firstPage.transitionOut()
-       // performSegue(withIdentifier: "secondVC", sender: self)
+        uiViewBaru = firstPage.gradientLayer(shinyTextLabel: firstPage.shimmers())
+        view.addSubview(uiViewBaru!)
         
     }
     
+   
+    
+    @IBAction func tapToStart(_ sender: UIButton) {
+        
+        uiViewBaru?.removeFromSuperview()
+        
+        firstPage.transitionOut { (success) -> Void in
+            self.performSegue(withIdentifier: "secondVC", sender: self)
+        }
+    }
 }
+
+
+
