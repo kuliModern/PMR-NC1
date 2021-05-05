@@ -11,20 +11,22 @@ import AVFoundation
 class ThirdViewController: UIViewController, closeButtonDelegate {
     
     @IBOutlet var thirdModel: ThirdPageView!
-    
+    var player: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         thirdModel.setup(delegate: self)
+        thirdModel.audioController()
        
-        thirdModel.voiceOver()
         
         
         // Do any additional setup after loading the view.
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
         thirdModel.animateWave()
     }
     
@@ -35,9 +37,6 @@ class ThirdViewController: UIViewController, closeButtonDelegate {
     
     func buttonPressed() {
         thirdModel.voiceOver()
-        
-        
-
     }
     
    
