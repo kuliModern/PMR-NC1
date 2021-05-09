@@ -11,6 +11,10 @@
 		C0A8B0362641AFCD007A8396 /* Rains.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0A8B0352641AFCD007A8396 /* Rains.mp3 */; };
 		C0A8B0382641AFE3007A8396 /* OceanWaves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0A8B0372641AFE3007A8396 /* OceanWaves.mp3 */; };
 		C0AB00AB2641B25700FE96A4 /* VoiceOver.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C0AB00AA2641B25700FE96A4 /* VoiceOver.m4a */; };
+		C0AB00AD26427CE200FE96A4 /* testAudio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C0AB00AC26427CE200FE96A4 /* testAudio.m4a */; };
+		C0AB00AF2642897100FE96A4 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB00AE2642897100FE96A4 /* FourthViewController.swift */; };
+		C0AB00B12642899F00FE96A4 /* FourthPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB00B02642899F00FE96A4 /* FourthPageView.swift */; };
+		C0AB00B22642EB7400FE96A4 /* PeEmEr.app in Resources */ = {isa = PBXBuildFile; fileRef = C0F92A1626404A5200578145 /* PeEmEr.app */; };
 		C0F92A1A26404A5200578145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F92A1926404A5200578145 /* AppDelegate.swift */; };
 		C0F92A1C26404A5200578145 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F92A1B26404A5200578145 /* SceneDelegate.swift */; };
 		C0F92A2126404A5200578145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F92A1F26404A5200578145 /* Main.storyboard */; };
@@ -32,6 +36,9 @@
 		C0A8B0352641AFCD007A8396 /* Rains.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rains.mp3; sourceTree = "<group>"; };
 		C0A8B0372641AFE3007A8396 /* OceanWaves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OceanWaves.mp3; sourceTree = "<group>"; };
 		C0AB00AA2641B25700FE96A4 /* VoiceOver.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = VoiceOver.m4a; sourceTree = "<group>"; };
+		C0AB00AC26427CE200FE96A4 /* testAudio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = testAudio.m4a; sourceTree = "<group>"; };
+		C0AB00AE2642897100FE96A4 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		C0AB00B02642899F00FE96A4 /* FourthPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPageView.swift; sourceTree = "<group>"; };
 		C0F92A1626404A5200578145 /* PeEmEr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeEmEr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F92A1926404A5200578145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F92A1B26404A5200578145 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +97,7 @@
 				C0A8B03226414F70007A8396 /* OceanWave.mp3 */,
 				C0A8B0372641AFE3007A8396 /* OceanWaves.mp3 */,
 				C0A8B03426414F70007A8396 /* Oceans.mp3 */,
+				C0AB00AC26427CE200FE96A4 /* testAudio.m4a */,
 				C0AB00AA2641B25700FE96A4 /* VoiceOver.m4a */,
 				C0A8B03126414F6F007A8396 /* Sounds */,
 				C0F92A2F2640501900578145 /* Controller */,
@@ -118,6 +126,7 @@
 				C0F92A322640539800578145 /* FirstPageModel.swift */,
 				C0F92A3826411D8C00578145 /* SecondPageView.swift */,
 				C0A8B02726413797007A8396 /* ThirdPageView.swift */,
+				C0AB00B02642899F00FE96A4 /* FourthPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 				C0F92A302640503500578145 /* FirstPageViewController.swift */,
 				C0F92A3626411D6F00578145 /* SecondViewController.swift */,
 				C0F92A3D2641356F00578145 /* ThirdViewController.swift */,
+				C0AB00AE2642897100FE96A4 /* FourthViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +214,8 @@
 				C0F92A2326404A5300578145 /* Assets.xcassets in Resources */,
 				C0A8B0382641AFE3007A8396 /* OceanWaves.mp3 in Resources */,
 				C0F92A2126404A5200578145 /* Main.storyboard in Resources */,
+				C0AB00AD26427CE200FE96A4 /* testAudio.m4a in Resources */,
+				C0AB00B22642EB7400FE96A4 /* PeEmEr.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F92A312640503500578145 /* FirstPageViewController.swift in Sources */,
+				C0AB00B12642899F00FE96A4 /* FourthPageView.swift in Sources */,
 				C0A8B02826413797007A8396 /* ThirdPageView.swift in Sources */,
 				C0F92A332640539800578145 /* FirstPageModel.swift in Sources */,
+				C0AB00AF2642897100FE96A4 /* FourthViewController.swift in Sources */,
 				C0F92A1A26404A5200578145 /* AppDelegate.swift in Sources */,
 				C0F92A3E2641356F00578145 /* ThirdViewController.swift in Sources */,
 				C0F92A3726411D6F00578145 /* SecondViewController.swift in Sources */,
@@ -371,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QJD99HSU3;
 				INFOPLIST_FILE = PeEmEr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,6 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QJD99HSU3;
 				INFOPLIST_FILE = PeEmEr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

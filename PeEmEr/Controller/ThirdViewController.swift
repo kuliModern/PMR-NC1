@@ -15,12 +15,11 @@ class ThirdViewController: UIViewController, closeButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        thirdModel.setup(delegate: self)
+        
         thirdModel.audioController()
-       
+        thirdModel.setup(delegate: self)
         
-        
+ 
         // Do any additional setup after loading the view.
     }
     
@@ -37,6 +36,10 @@ class ThirdViewController: UIViewController, closeButtonDelegate {
     
     func buttonPressed() {
         thirdModel.voiceOver()
+    }
+    
+    func moveVC(){
+        performSegue(withIdentifier: "finishSegue", sender: self)
     }
     
    

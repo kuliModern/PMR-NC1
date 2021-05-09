@@ -22,8 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hWR-fS-UIr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ocean_islands_aerial_view_128834_938x1668" translatesAutoresizingMaskIntoConstraints="NO" id="hWR-fS-UIr">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="522"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Abz-of-Gdx">
                                 <rect key="frame" x="-183" y="248" width="756" height="756"/>
@@ -58,12 +59,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.035274315629999997" green="0.074516691270000004" blue="0.074494622649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="hWR-fS-UIr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6BC-fC-xdw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hWR-fS-UIr" secondAttribute="trailing" id="BHX-1I-Sbu"/>
-                            <constraint firstItem="hWR-fS-UIr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q0S-Kc-WFZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hWR-fS-UIr" secondAttribute="bottom" constant="288" id="xyp-vK-ayw"/>
-                        </constraints>
                         <connections>
                             <outlet property="backgroundView" destination="hWR-fS-UIr" id="aFB-v2-7nU"/>
                             <outlet property="circleView" destination="Abz-of-Gdx" id="DXA-SN-Odz"/>
@@ -149,6 +144,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="YTM-cl-bOp">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="A4t-Dn-Lx5" userLabel="BiruMuda">
                                 <rect key="frame" x="-114" y="27" width="619" height="619"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -185,7 +184,7 @@
                                 <color key="progressTintColor" red="0.69008612629999999" green="0.85103136300000004" blue="0.96458774810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="trackTintColor" red="0.3881357312" green="0.57258421179999996" blue="0.64697659019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="01:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRZ-tT-YRk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="01:30" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="XRZ-tT-YRk">
                                 <rect key="frame" x="16" y="404" width="22" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="8"/>
@@ -212,6 +211,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" id="SaC-F4-1bV">
+                                <rect key="frame" x="-183" y="850" width="756" height="756"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.33578034849999999" green="0.63338371299999996" blue="0.72212433279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-uC-g88">
                                 <rect key="frame" x="340" y="43" width="29" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -227,28 +231,33 @@
                         <viewLayoutGuide key="safeArea" id="xZ2-sG-8Gc"/>
                         <color key="backgroundColor" red="0.69008612629999999" green="0.85103136300000004" blue="0.96458774810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
+                            <outlet property="backgroundImage" destination="YTM-cl-bOp" id="hHg-nf-Cd5"/>
+                            <outlet property="biruBawahVCBaru" destination="SaC-F4-1bV" id="KSW-1g-WD3"/>
                             <outlet property="biruMudaAtas" destination="A4t-Dn-Lx5" id="HaX-b8-92K"/>
                             <outlet property="biruTengah" destination="FS0-jC-P6Q" id="Trz-iZ-oYF"/>
                             <outlet property="biruTuaPalingBawah" destination="Jnj-87-soC" id="8WL-O9-xhe"/>
                             <outlet property="buttonStop" destination="iBc-dN-tIU" id="iU2-tW-D55"/>
                             <outlet property="endLabel" destination="7Pf-FE-63N" id="gkQ-d3-Ztw"/>
+                            <outlet property="pmrLabel" destination="UvF-b7-VMJ" id="pgA-US-PPs"/>
                             <outlet property="progressAudio" destination="pdM-2h-Tta" id="YC0-l2-bxp"/>
+                            <outlet property="textDuration" destination="XRZ-tT-YRk" id="2CH-lh-xyn"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="g6j-tD-Tkn"/>
                     <connections>
                         <outlet property="thirdModel" destination="LK1-XE-MGM" id="D6M-ka-PPe"/>
+                        <segue destination="VgB-f2-MqS" kind="presentation" identifier="finishSegue" animates="NO" modalPresentationStyle="fullScreen" id="MuQ-gi-6sk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohG-WU-mlq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2027.6923076923076" y="104.50236966824644"/>
         </scene>
-        <!--View Controller-->
+        <!--Fourth View Controller-->
         <scene sceneID="i5u-ak-0nW">
             <objects>
-                <viewController id="VgB-f2-MqS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ciS-el-bql">
+                <viewController id="VgB-f2-MqS" customClass="FourthViewController" customModule="PeEmEr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ciS-el-bql" customClass="FourthPageView" customModule="PeEmEr" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -257,15 +266,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="d8b-Yp-0Rf">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="522"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EDw-vu-sac">
+                                        <rect key="frame" x="-183" y="850" width="756" height="756"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.33578034849999999" green="0.63338371299999996" blue="0.72212433279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RfI-X6-QKZ">
                                         <rect key="frame" x="-183" y="248" width="756" height="756"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.33578034849999999" green="0.63338371299999996" blue="0.72212433279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congrats!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx6-Oo-e3K">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congrats!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="Wx6-Oo-e3K">
                                         <rect key="frame" x="161" y="390" width="68" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -273,17 +287,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwt-PQ-WFQ">
-                                        <rect key="frame" x="130" y="689" width="135" height="46"/>
+                                        <rect key="frame" x="113" y="689" width="164" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <state key="normal" title="Tap to Finish">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="backToHome:" destination="ciS-el-bql" eventType="touchUpInside" id="cR5-CC-Dnx"/>
                                             <action selector="tapToStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KDE-MI-3BY"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've Done It!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opq-aZ-Y30">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've Done It!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="opq-aZ-Y30">
                                         <rect key="frame" x="150" y="420" width="90" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
@@ -304,16 +319,28 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bB0-Hq-5CO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="circleView" destination="RfI-X6-QKZ" id="7Dx-af-rKW"/>
+                            <outlet property="cirlceBawahHome" destination="EDw-vu-sac" id="XcZ-mJ-bNQ"/>
+                            <outlet property="pmrDesc" destination="opq-aZ-Y30" id="6Ve-bK-58w"/>
+                            <outlet property="pmrLabel" destination="Wx6-Oo-e3K" id="Z95-cf-6bl"/>
+                            <outlet property="tapToHome" destination="Vwt-PQ-WFQ" id="873-jW-95H"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="fourthView" destination="ciS-el-bql" id="lba-vh-NRn"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToMain" animates="NO" modalPresentationStyle="fullScreen" id="tY4-fY-TQe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENb-3D-G1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2996.9230769230767" y="104.50236966824644"/>
+            <point key="canvasLocation" x="2877" y="105"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="388" height="694"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="ocean_islands_aerial_view_128834_938x1668" width="390" height="517"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

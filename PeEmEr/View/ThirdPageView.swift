@@ -11,9 +11,10 @@ import AVFoundation
 protocol closeButtonDelegate {
     func closeButton()
     func buttonPressed()
+    func moveVC()
 }
 
-class ThirdPageView: UIView{
+class ThirdPageView: UIView, AVAudioPlayerDelegate{
     
     
     @IBOutlet weak var buttonStop: UIButton!
@@ -22,14 +23,25 @@ class ThirdPageView: UIView{
     @IBOutlet weak var biruTuaPalingBawah: UIImageView!
     @IBOutlet weak var endLabel: UILabel!
     @IBOutlet weak var progressAudio: UIProgressView!
+    @IBOutlet weak var textDuration: UILabel!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var biruBawahVCBaru: UIImageView!
+    @IBOutlet weak var pmrLabel: UILabel!
+    
     
     var delegate: closeButtonDelegate?
     var player: AVAudioPlayer?
     var timer: Timer?
     
     func setup(delegate: closeButtonDelegate){
-        buttonStop.layer.cornerRadius = 0.5 * buttonStop.bounds.size.width
+        
         self.delegate = delegate
+        player?.delegate = self
+        
+        buttonStop.layer.cornerRadius = 0.5 * buttonStop.bounds.size.width
+        backgroundImage.alpha = 0
+        
+       
     }
     
     func animateWave(){
@@ -61,18 +73,12 @@ class ThirdPageView: UIView{
         }
         else{
             
-           
-            
             if let progress = player?.currentTime{
                 progressAudio.progress = Float(progress)
             }
-        
+            
             player?.play()
             buttonStop.setImage(UIImage(systemName: "pause.fill"), for: .normal)
-           
-            
-            endLabel(fromPlayer: player!)
-            
             
             
         }
@@ -80,6 +86,10 @@ class ThirdPageView: UIView{
     
     
     func audioController(){
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+        
+        
         
         guard let soundPath = Bundle.main.url(forResource: "VoiceOver", withExtension: "m4a")
         else {return print("File gak ketemu")}
@@ -94,6 +104,7 @@ class ThirdPageView: UIView{
             // Play a sound
             
             player?.play()
+            endLabel(fromPlayer: player!)
             
             
             var updater = CADisplayLink(target: self, selector: #selector(self.updateProgress))
@@ -107,12 +118,19 @@ class ThirdPageView: UIView{
         }
     }
     
-    
-    
-    @objc func updateProgress(){
+    func animateOut(completion: @escaping(_ success: Bool ) -> Void){
+        UIView.animate(withDuration: 3, animations: {
+            self.biruTuaPalingBawah.frame = CGRect(x: -114, y: -590, width: 619, height: 619)
+            self.biruTengah.frame = CGRect(x: -114, y: -590, width: 619, height: 619)
+            self.biruMudaAtas.frame = CGRect(x: -114, y: -590, width: 619, height: 619)
+            self.biruBawahVCBaru.frame = CGRect(x: -183, y: 248, width: 756, height: 756)
+            
+            self.backgroundImage.alpha = 1
+            self.pmrLabel.alpha = 0
+            
+        }, completion: completion)
+       
         
-        let normalizedTime = Float(self.player?.currentTime as! Double / (self.player?.duration as! Double) )
-        progressAudio.progress = normalizedTime
         
         
     }
@@ -128,6 +146,27 @@ class ThirdPageView: UIView{
         
     }
     
+    @objc func updateCounting(){
+        
+        let currentTime1 = Int((player?.currentTime)!)
+        let minutes = currentTime1/60
+        let seconds = currentTime1 - minutes * 60
+        textDuration.text = NSString(format: "%02d:%02d", minutes,seconds) as String
+        
+    }
+    
+    
+    @objc func updateProgress(){
+        
+        let normalizedTime = Float(self.player?.currentTime as! Double / (self.player?.duration as! Double) )
+        progressAudio.progress = normalizedTime
+        
+        
+    }
+    
+
+    
+    
     
     @IBAction func closeButton(_ sender: UIButton) {
         
@@ -139,4 +178,15 @@ class ThirdPageView: UIView{
         delegate?.buttonPressed()
         
     }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        
+        print("KELAR BOSSS")
+        animateOut { (success) in
+            self.delegate?.moveVC()
+        }
+        
+        buttonStop.setImage(UIImage(systemName: "play.fill"), for: .normal)
+    }
 }
+

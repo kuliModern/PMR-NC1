@@ -16,10 +16,15 @@ class FirstPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         firstPage.setup()
         uiViewBaru = firstPage.gradientLayer(shinyTextLabel: firstPage.shimmers())
         view.addSubview(uiViewBaru!)
-        
     }
     
    
